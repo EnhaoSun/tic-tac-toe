@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  background-color: #282d35;
+  color: white;
+}
+
+li {
+  margin-top: 10px;
+}
+li button {
+  background: #21222a;
+  color: white;
+  border-radius: 2em;
+  padding: 7px;
+  border-color: #21222a;
+  border-style: solid;
+}
+
+li button:focus {
+  color: #61dafb;
+}
+
+li button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  color: #61dafb;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #21222a;
+  color: white;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.square:hover {
+  background: rgba(221, 221, 221, 0.3);
+}
+
+.container {
+  border: 1px dashed #999;
+  width: 400px;
+  height: 600px;
+  margin: auto;
+  margin-top: 30px;
+  overflow: auto;
+  align-items: center;
+}
+
+.container h2 {
+  text-align: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.game-board {
+  margin-left: 50px;
+}
+
+.game-status {
+}
+
+.game-info {
+  margin-right: 50px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.group-button {
+  display: flex;
+  padding-left: 40px;
+}
+
+.group-button button {
+  border-color: #21222a;
+  border-style: solid;
+  background: #21222a;
+  color: white;
+  border-radius: 2em;
+  padding: 7px;
+}
+
+.group-button button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  color: #61dafb;
+}
+
+.group-button :first-child {
+  margin-right: 15px;
+}
+
+/* 每当有人获胜时，高亮显示连成一线的 3 颗棋子 */
+.winSquare {
+  color: #61dafb;
+}
